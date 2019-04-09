@@ -39,11 +39,11 @@ require './lib/account'
 
 ## User Guide
 
-Create a new bank ``` bank = Bank.new ```
-Open an account ``` bank.open_account ```
-Make a deposit ```bank.deposit(account number, value, [date])```
-Make a withdrawal ```bank.withdraw(account number, value, [date])```
-Print out a statement ```bank.print_statement(account number) ```
+- Create a new bank ``` bank = Bank.new ```
+- Open an account ``` bank.open_account ```
+- Make a deposit ```bank.deposit(account number, value, [date])```
+- Make a withdrawal ```bank.withdraw(account number, value, [date])```
+- Print out a statement ```bank.print_statement(account number) ```
 
 ## Testing
 
