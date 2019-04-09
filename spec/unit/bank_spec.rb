@@ -6,19 +6,18 @@ describe Bank do
   end
 
   it "Can open a new account" do
-    expect(@bank.openAccount).to eq 1
+    expect(@bank.open_account).to eq 1
   end
 
   it "Can open a second account" do
-    @bank.openAccount
-    expect(@bank.openAccount).to eq 2
+    @bank.open_account
+    expect(@bank.open_account).to eq 2
   end
 
   it "Can deposit money into an account and be seen in a statment" do
-    account = @bank.openAccount
+    account = @bank.open_account
     @bank.deposit(account, 500, "14/01/2012")
-    expect {@bank.printStatement(account)}.to output("date || credit || debit || balance\n14/01/2012 || 500.00 ||  || 500.00\n").to_stdout
+    expect { @bank.print_statement(account) }.to output("date || credit || debit || balance\n14/01/2012 || 500.00 ||  || 500.00\n").to_stdout
   end
-
 
 end

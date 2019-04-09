@@ -33,7 +33,29 @@ irb
 ```
 
 ```
-require './bank'
-require './account'
-require './client'
+require './lib/bank'
+require './lib/account'
 ```
+
+## User Guide
+
+Create a new bank ``` bank = Bank.new ```
+Open an account ``` bank.open_account ```
+Make a deposit ```bank.deposit(account number, value, [date])```
+Make a withdrawal ```bank.withdraw(account number, value, [date])```
+Print out a statement ```bank.print_statement(account number) ```
+
+## Testing
+
+### Run tests
+
+To run test
+```
+bundle install
+```
+```
+rspec
+```
+## Approach
+
+My approach to building this app was to start with the requirements. Use them to guide what objects I would need and create a feature test using them. I then solved the feature test line by line. Writing unit tests as appropriate to bridge the gaps. As a result it lead to one large commit as the feature test took a fair amount of code to solve. I then refactored display formatting into its own class following SRP.
