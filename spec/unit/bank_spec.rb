@@ -6,7 +6,6 @@ describe Bank do
   end
 
   it "Can open a new account" do
-
     expect(@bank.openAccount).to eq 1
   end
 

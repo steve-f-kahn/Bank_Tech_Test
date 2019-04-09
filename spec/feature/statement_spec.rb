@@ -1,7 +1,7 @@
 require 'bank'
 require 'account'
 
-describe "Client checks there bank statemnt after transactions" do
+describe "Client checks there bank statement after transactions" do
   it "Has a statement shown after transactions" do
     bank = Bank.new
     account = bank.openAccount

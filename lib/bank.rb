@@ -1,3 +1,5 @@
+require_relative "display"
+
 class Bank
   def initialize
     @accounts = []
@@ -17,16 +19,6 @@ class Bank
   end
 
   def printStatement(account)
-    newline = ["date", "credit", "debit", "balance"].join(" || ")
-    output = []
-    output.push(newline)
-    @accounts[account-1].transactions.reverse.each do |transaction|
-      newline = []
-      transaction.each_value do |string|
-        newline.push(string)
-      end
-      output.push(newline.join(" || "))
-    end
-    puts output.join("\n")
+      puts Display.formatStatement(@accounts[account-1].transactions)
   end
 end
