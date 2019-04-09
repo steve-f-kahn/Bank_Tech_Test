@@ -38,7 +38,7 @@ require './lib/account'
 ```
 
 ## User Guide
-
+![alt text]("Screenshots/demo.png A demo of the bank app")
 - Create a new bank ``` bank = Bank.new ```
 - Open an account ``` bank.open_account ```
 - Make a deposit ```bank.deposit(account number, value, [date])```
