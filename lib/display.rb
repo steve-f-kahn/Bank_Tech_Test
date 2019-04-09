@@ -1,13 +1,19 @@
 class Display
+
+  HEADER = ['date', 'credit', 'debit', 'balance'].join(' || ')
+
   def self.format_statement(array)
-    newline = ['date', 'credit', 'debit', 'balance'].join(' || ')
-    output = []
-    output.push(newline)
+    output = [HEADER]
     array.reverse.each do |transaction|
-      newline = []
-      transaction.each_value { |string| newline.push(string) }
-      output.push(newline.join(' || '))
+      output << newline(transaction)
     end
     output.join("\n")
   end
+
+  def self.newline(transaction)
+    newline = []
+    transaction.each_value { |string| newline << string }
+    newline.join(' || ')
+  end
+
 end
